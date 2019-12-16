@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: "Meeting", completed: false}
       ],
       newItem: ""
+    },
+    methods: {
+
+    completeEvent: function(index){
+          this.events[index].completed = true;
+        }
     }
   });
 });
