@@ -1,0 +1,28 @@
+<div class="field">
+  <label><strong>Is JavaScript awesome?</strong></label>
+
+<div class="control">
+    <label class="radio">
+      <input v-model="form.js_awesome" type="radio" value="Yes">
+      Yes
+    </label>
+    <label class="radio">
+      <input v-model="form.js_awesome" type="radio" value="Yeap!">
+      Yeap!
+    </label>
+  </div>
+</div>
+...
+
+data: {
+  form : {
+    name: '',
+    message: '',
+    inquiry_type: '',
+    logrocket_usecases: [],
+    terms: false,
+    concepts: [],
+    js_awesome: '' // radio input value
+  },
+  // ..
+}

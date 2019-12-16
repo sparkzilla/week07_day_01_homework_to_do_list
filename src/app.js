@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: "Gym", completed: true},
         { type: "Meeting", completed: false}
       ],
-      newEvent: ""
+      form: {
+      newEvent: "",
+      newCompleted: false
+     }
     },
     methods: {
 
@@ -22,9 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     saveNewEvent: function(){
-      let eventObject = {type: this.newEvent, completed: false}
+      let eventObject = {type: this.form.newEvent, completed: this.form.newCompleted}
       this.events.push(eventObject)
-      this.newEvent = ""
+      this.form.newEvent = ""
+      this.form.newCompleted = false
     }
   }
   });

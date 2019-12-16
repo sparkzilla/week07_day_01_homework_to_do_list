@@ -13,9 +13,23 @@
   <div id="app">
     <h1>Mark's To-Do List</h1>
     <form v-on:submit.prevent ="saveNewEvent">
+      <div class="form-field">
       <label for="new-event">Add a new to-do!</label>
-      <input v-model="newEvent" type="text" id="new-event" />
-      <input type="submit" value ="Save" />
+      <input v-model="form.newEvent" type="text" id="new-event" /><br />
+    </div>
+      <div class="form-field">
+      <label class="radio">
+        <input v-model="form.newCompleted" type="radio" value="true">
+      Completed
+      </label>
+      <label class="radio">
+        <input v-model="form.newCompleted" type="radio" value="false">
+      To-Do
+      </label>
+      </div>
+      <div class="form-field">
+      <input class ="button" type="submit" value ="Save" />
+      </div>
     </form>
 
     <ul>
