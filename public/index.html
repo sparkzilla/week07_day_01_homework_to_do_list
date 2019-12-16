@@ -14,10 +14,8 @@
     <ul>
     <li v-for="(event, index) in events" v-bind:class="event.completed ? 'completed' : 'incomplete'">
       <span>{{event.type}}</span>
-      <span v-if="event.completed" >Completed</span>
+      <span v-if="event.completed" v-on:click="unCompleteEvent(index)" >Completed</span>
       <button v-if="!event.completed" v-on:click="completeEvent(index)">To-Do</button>
-
-
     </li>
   </ul>
   </div>

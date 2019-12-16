@@ -14,8 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     methods: {
 
     completeEvent: function(index){
-          this.events[index].completed = true;
-        }
+      this.events[index].completed = true;
+    },
+
+    unCompleteEvent: function(index){
+      this.events[index].completed = false;
     }
+  }
   });
 });
