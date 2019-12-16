@@ -4,13 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Vue</title>
+  <title>Mark's To Do</title>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
   <script src="./js/bundle.js"></script>
 </head>
 <body>
   <div id="app">
+    <ul>
+    <li v-for="(event, index) in events" v-bind:class="event.completed ? 'completed' : 'incomplete'">
+      <span>{{event.type}}</span>
+
+
+    </li>
+  </ul>
   </div>
 </body>
 </html>
