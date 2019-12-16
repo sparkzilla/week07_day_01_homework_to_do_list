@@ -11,6 +11,13 @@
 </head>
 <body>
   <div id="app">
+    <h1>Mark's To-Do List</h1>
+    <form v-on:submit.prevent ="saveNewEvent">
+      <label for="new-event">Add a new to-do!</label>
+      <input v-model="newEvent" type="text" id="new-event" />
+      <input type="submit" value ="Save" />
+    </form>
+
     <ul>
     <li v-for="(event, index) in events" v-bind:class="event.completed ? 'completed' : 'incomplete'">
       <span>{{event.type}}</span>
@@ -18,13 +25,6 @@
       <button v-if="!event.completed" v-on:click="completeEvent(index)">To-Do</button>
     </li>
   </ul>
-
-  <form v-on:submit.prevent ="saveNewEvent">
-    <label for="new-event">Add a new to-do!</label>
-    <input v-model="newEvent" type="text" id="new-event" />
-    <input type="submit" value ="Save New To Do" />
-  </form>
-
 
   </div>
 </body>
