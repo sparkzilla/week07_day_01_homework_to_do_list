@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: "Gym", completed: true},
         { type: "Meeting", completed: false}
       ],
-      newItem: ""
+      newEvent: ""
     },
     methods: {
 
@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     unCompleteEvent: function(index){
       this.events[index].completed = false;
+    },
+
+    saveNewEvent: function(){
+      let eventObject = {type: this.newEvent, completed: false}
+      this.events.push(eventObject)
+      this.newEvent = ""
     }
   }
   });

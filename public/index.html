@@ -18,6 +18,14 @@
       <button v-if="!event.completed" v-on:click="completeEvent(index)">To-Do</button>
     </li>
   </ul>
+
+  <form v-on:submit.prevent ="saveNewEvent">
+    <label for="new-event">Add a new to-do!</label>
+    <input v-model="newEvent" type="text" id="new-event" />
+    <input type="submit" value ="Save New To Do" />
+  </form>
+
+
   </div>
 </body>
 </html>
